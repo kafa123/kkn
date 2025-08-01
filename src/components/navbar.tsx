@@ -17,11 +17,11 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-black bg-opacity-90' : 'bg-transparent'
+        isScrolled ? 'bg-white bg-opacity-90' : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto pl-4 pr-10 py-4 flex justify-between items-center text-white">
-        <div className="text-lg font-bold">MyLogo</div>
+      <nav className={`max-w-7xl mx-auto pl-4 pr-10 py-4 flex justify-between items-center ${isScrolled ?'text-black':'text-white'}`} >
+        <div className="text-lg font-bold">Kedungjati</div>
         <ul className="flex gap-6">
           <li><a href="#" className="hover:underline">Home</a></li>
           <li><a href="#" className="hover:underline">About</a></li>

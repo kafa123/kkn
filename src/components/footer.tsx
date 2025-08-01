@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-white2 text-gray-700 pt-10 border-t mt-10">
+    <footer className="bg-cyan-100 text-gray-700 pt-10 drop-shadow-teal-300 mt-10">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         
         <div>
-          <h2 className="text-xl font-bold mb-3 text-green-700">Kedungjati</h2>
+          <h2 className="text-xl font-bold mb-3 text-green-900">Kedungjati</h2>
           <p className="text-sm">
             Platform informasi wisata dan potensi desa Kedungjati untuk para wisatawan dan masyarakat umum.
           </p>
@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-gray-700 text-center text-sm py-5 text-white mt-10 border-t pt-5">
+      <div className="bg-cyan-800 text-center text-sm py-5 text-white mt-10 border-t pt-5">
         © {new Date().getFullYear()} Kedungjati | Dibuat oleh Tim KKN Kedungjati
       </div>
     </footer>
