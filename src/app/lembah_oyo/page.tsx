@@ -24,14 +24,14 @@ export default function WisataPage() {
       title='To The Unknown'
       backgroundImage='/images/Hero_wisata.JPG'
       />
-      <Section data-aos="fade-down" title="Make Yours Destination" image="/contoh.jpg" />
+      <Section data-aos="fade-down" title="Make Yours Destination" image="/contoh.JPG" />
       <h2 className="text-center text-xl mt-10 font-bold" data-aos="fade-up">
         Countless Experience
       </h2>
       <Features />
       <Section
         title="The Fact and History about Oya River"
-        image="/kedung parangan.jpg"
+        image="/kedung_parangan.JPG"
       >
         <p
           className="max-w-4xl mx-auto text-l text-gray-700 mt-4"
@@ -47,9 +47,9 @@ export default function WisataPage() {
       </h2>
       <GalleryCarousel
         images={[
-          "/contoh canoe.jpg",
-          "/canoe 2.jpg",
-          "/canoe 3.jpg",
+          "/contoh_canoe.JPG",
+          "/canoe_2.JPG",
+          "/canoe_3.JPG",
         ]}
       />
       <h2 className="text-center text-xl mt-16 font-bold" data-aos="fade-up">
