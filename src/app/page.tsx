@@ -76,7 +76,7 @@ export default function HomePage() {
   <div className="relative z-10 text-white text-center justify-center py-24 px-4">
     <h2 className="text-4xl font-bold">Wisata Kedungjati</h2>
     <p className="mt-4 text-lg">Nikmati keindahan alam dan budaya Kedungjati</p>
-    <Link href="/wisata" passHref>
+    <Link href="/lembah_oyo" passHref>
       <div className="inline-block mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full shadow-md hover:bg-gray-200 transition cursor-pointer">
         Lihat Wisata
       </div>

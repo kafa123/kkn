@@ -47,7 +47,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/wisata" className="rounded-xl px-2 hover:bg-white/50">
+            <Link href="/lembah_oyo" className="rounded-xl px-2 hover:bg-white/50">
               Wisata
             </Link>
           </li>
