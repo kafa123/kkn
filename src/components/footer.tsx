@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-cyan-100 text-gray-700 pt-10 drop-shadow-teal-300 mt-10">
+    <footer className="bg-linear-180 from-cyan-100 to-cyan-300 text-gray-700 pt-10 drop-shadow-teal-300 mt-10">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         
         <div>
-          <h2 className="text-xl font-bold mb-3 text-green-900">Kedungjati</h2>
+          <h2 className="text-xl font-extrabold mb-3 text-gray-800">Kedungjati</h2>
           <p className="text-sm">
             Platform informasi wisata dan potensi desa Kedungjati untuk para wisatawan dan masyarakat umum.
           </p>
@@ -35,7 +35,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-2">Follow Us On</h3>
           <div className="flex justify-center md:justify-start gap-4 mt-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
               <img src="/facebook.svg" alt="Facebook" className="w-6 h-6 hover:scale-110 transition" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-cyan-800 text-center text-sm py-5 text-white mt-10 border-t pt-5">
-        © {new Date().getFullYear()} Kedungjati | Dibuat oleh Tim KKN Kedungjati
+        © {new Date().getFullYear()} Kedungjati | Dibuat oleh Tim KKN UGM Kedungjati
       </div>
     </footer>
   );

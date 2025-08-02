@@ -8,13 +8,13 @@ const services = [
     image: '/contoh canoe.jpg',
     title: 'Canoe',
     points: [
-      'Harga Sewa Unit: Rp 15.000/30min',
-      'Harga Sewa Group: Rp 10.000/org',
+      'Harga Sewa Kano kecil: Rp 10.000/org',
+      'Harga Sewa Kano besar: Rp 15.000/org',
       'Durasi: 15 menit',
     ],
   },
   {
-    image: '/contoh canoe.jpg',
+    image: '/camp 1.jpg',
     title: 'Camping',
     points: [
       'Tenda disediakan oleh pengunjung',
@@ -23,7 +23,7 @@ const services = [
     ],
   },
   {
-    image: '/contoh canoe.jpg',
+    image: '/toni.JPG',
     title: 'Mancing',
     points: [
       'Harga Sewa Lokasi: Rp 5.000/org',
@@ -54,25 +54,26 @@ export function Service() {
                 }`}
             >
               {/* Image with colored shadow box */}
-              <div className="relative w-full md:w-1/2">
-                <img
-                  data-aos="fade-down"
-                  data-aos-delay={`${400 + index * 100}`}
-                  data-aos-once="false"
-                  data-aos-mirror="true"
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-auto rounded-lg relative z-10 shadow-lg"
-                />
-                <div
-                  data-aos="fade-down"
-                  data-aos-delay={`${400 + index * 100}`}
-                  data-aos-once="false"
-                  data-aos-mirror="true"
-                  className={`absolute top-4 ${isEven ? 'right-4' : 'left-4'
-                    } w-full h-full bg-cyan-200 z-0 rounded-lg shadow-2xl`}
-                />
-              </div>
+<div className="relative w-full md:w-1/2 md:aspect-square">
+  <img
+    data-aos="fade-down"
+    data-aos-delay={`${400 + index * 100}`}
+    data-aos-once="false"
+    data-aos-mirror="true"
+    src={service.image}
+    alt={service.title}
+    className="w-full h-full object-cover rounded-lg relative z-10 shadow-lg"
+  />
+  <div
+    data-aos="fade-down"
+    data-aos-delay={`${400 + index * 100}`}
+    data-aos-once="false"
+    data-aos-mirror="true"
+    className={`absolute top-4 ${isEven ? 'right-4' : 'left-4'
+      } w-full h-full bg-cyan-200 z-0 rounded-lg shadow-2xl`}
+  />
+</div>
+
 
               {/* Text Content */}
               <div className="md:w-1/2 text-left">

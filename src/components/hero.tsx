@@ -1,9 +1,21 @@
-'use client'
+'use client';
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-export default function Hero() {
+interface HeroProps {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  backgroundImage: string;
+}
+
+export default function Hero({
+  title,
+  subtitle = 'Explore Up',
+  description = '~ Oya River, Kedung Jati ~',
+  backgroundImage,
+}: HeroProps) {
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -14,32 +26,31 @@ export default function Hero() {
         opacity: 0,
         stagger: 0.05,
         duration: 0.6,
-        ease: 'back.out(1.7)'
+        ease: 'back.out(1.7)',
       });
     }
   }, []);
 
-  const title = "To The Unknown";
-  
   return (
     <section
       className="relative h-[90vh] bg-cover bg-center"
-      style={{ backgroundImage: `url('/Bagus edit.jpg')` }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
         <div className="text-center text-white">
-          <h2 className="text-xl font-light">Explore Up</h2>
-          <h1
-            ref={titleRef}
-            className="text-4xl md:text-6xl font-bold mt-2"
-          >
+          {subtitle && <h2 className="text-xl font-light">{subtitle}</h2>}
+
+          <h1 ref={titleRef} className="text-4xl md:text-6xl font-bold mt-2">
             {title.split('').map((char, i) => (
               <span key={i} className="inline-block">
                 {char === ' ' ? '\u00A0' : char}
               </span>
             ))}
           </h1>
-          <p className="mt-2 text-sm italic">~ Oya River, Kedung Jati ~</p>
+
+          {description && (
+            <p className="mt-2 text-sm italic">{description}</p>
+          )}
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 interface SectionProps {
   title: string;
-  image: string;
+  image?: string;
   children?: React.ReactNode;
 }
 
