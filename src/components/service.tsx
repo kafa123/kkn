@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const services = [
   {
-    image: '/canoe_1.JPG',
+    image: '/canoe_1.jpg',
     title: 'Canoe',
     points: [
       'Harga Sewa Kano kecil: Rp 10.000/org',

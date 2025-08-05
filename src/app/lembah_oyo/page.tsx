@@ -25,7 +25,7 @@ export default function WisataPage() {
         backgroundImage='/images/Hero_wisata.JPG'
       />
       <div className='px-4 sm:px-6 lg:px-8'>
-        <Section data-aos="fade-down" title="Make Yours Destination" image="/contoh.jpg" />
+        <Section data-aos="fade-down" title="Make Yours Destination" image="/contoh.JPG" />
         <h2 className="text-center text-xl mt-10 font-bold" data-aos="fade-up">
           Countless Experience
         </h2>
@@ -37,8 +37,7 @@ export default function WisataPage() {
           <p
             className="max-w-4xl mx-auto text-l text-gray-700 mt-4 "
             data-aos="fade-up"
-            data-aos-delay="200"
-          >
+            data-aos-delay="200">
             Lembah Oyo atau Kedung Parangan Merupakan salah satu destinasi wisata “hidden gem” yang terletak di Dusun Kedung Jati, Kalurahan Selopamioro, Kapanewon Imogiri, Kabupaten Bantul, Daerah Istimewa Yogyakarta. Wisata ini dikelilingi pebukitan karst dan aliran Sungai Oya yang jernih berwarna kehijauan.
           </p>
         </Section>
@@ -46,16 +45,16 @@ export default function WisataPage() {
         <h2 className="text-center text-xl my-16 font-bold" data-aos="fade-up">
           Our Gallery
         </h2>
-                </div>
-        <GalleryCarousel
-          images={[
-            "/canoe_1.jpg",
-            "/canoe_2.jpg",
-            "/canoe_3.jpg",
-          ]}
-        />
+      </div>
+      <GalleryCarousel
+        images={[
+          "/canoe_1.jpg",
+          "/canoe_2.JPG",
+          "/canoe_3.JPG",
+        ]}
+      />
 
-        <div className='px-4 sm:px-6 lg:px-8'>
+      <div className='px-4 sm:px-6 lg:px-8'>
         <h2 className="text-center text-xl mt-16 font-bold" data-aos="fade-up">
           Our Location
         </h2>
