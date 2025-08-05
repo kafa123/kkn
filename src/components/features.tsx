@@ -1,7 +1,6 @@
 'use client';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useState, useEffect } from 'react';
+
+import { useState } from 'react';
 
 const features = [
   {
@@ -44,13 +43,6 @@ const features = [
 
 export function Features() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  useEffect(() => {
-    AOS.init({
-      duration: 800,   // animation duration
-      once: true,      // whether animation should happen only once
-      offset: 120,     // offset (in px) from the original trigger point
-    });
-  }, []);
 
 
   return (
@@ -60,11 +52,6 @@ export function Features() {
 
         return (
           <div
-            data-aos="fade-down"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-duration="1000"
-            data-aos-delay={`${400 + idx * 100}`}
             key={idx}
             onClick={() => setExpandedIndex(isExpanded ? null : idx)}
             className={`p-6 rounded-lg shadow cursor-pointer transition-transform duration-500 ease-in-out
@@ -72,7 +59,7 @@ export function Features() {
     ${isExpanded ? 'bg-cyan-200 text-gray-900 scale-[1.02] rotate-y-[360deg]' : 'bg-cyan-50 text-gray-700 scale-100 rotate-y-0'}
   `}
           >
-            <img src={f.icon} alt={f.title} className="w-12 h-12 mb-2 transition-transform duration-500 ease-in-out" />
+            <img src={f.icon} alt={f.title} className="w-12 h-12 mb-2 text-center transition-transform duration-500 ease-in-out" />
             <h3 className="font-semibold text-lg">{f.title}</h3>
             <p
               className={`font-light text-sm mt-1 text-center transition-all duration-500 ease-in-out

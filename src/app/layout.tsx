@@ -20,6 +20,7 @@ const source_Sans_3 = Source_Sans_3({
 export const metadata: Metadata = {
   title: 'KedungJati',
   description: 'Explore KedungJati tourism site',
+  icons: "logo-bantul.svg"
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,7 +1,8 @@
 'use client';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 interface SectionProps {
   title: string;
   image?: string;
@@ -9,17 +10,22 @@ interface SectionProps {
 }
 
 export function Section({ title, image, children }: SectionProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
 
-      useEffect(() => {
-        AOS.init({    // whether animation should happen only once
-        // offset (in px) from the original trigger point
-        });
-      }, []);
-    
-  
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <section className="py-16 text-center" data-aos="fade-down" data-aos-mirror="true" data-aos-once="false" data-aos-delay="400">
+    <section
+      className="py-16 text-center"
+      data-aos="fade-down"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-delay="400"
+    >
       <h2 className="text-xl font-bold mb-6">{title}</h2>
+
       <div className="relative mx-auto max-w-4xl w-full">
         <img
           src={image}
@@ -28,8 +34,20 @@ export function Section({ title, image, children }: SectionProps) {
         />
         {children && (
           <div className="absolute inset-0 flex items-end justify-center">
-            <div className="bg-white/70 px-6 py-4 rounded-b-lg shadow text-base font-medium">
-              {children}
+            <div className="bg-white/70 px-6 sm:py-2 lg:py-4 rounded-b-lg shadow text-base font-medium w-full">
+              <div
+                className={`transition-all duration-300 ease-in-out text-gray-700 text-sm overflow-hidden ${
+                  isExpanded ? 'max-h-full' : 'max-h-[4.5rem] sm:max-h-full'
+                }`}
+              >
+                {children}
+              </div>
+              <button
+                onClick={() => setIsExpanded((prev) => !prev)}
+                className="mt-2 text-blue-500 underline sm:hidden"
+              >
+                {isExpanded ? 'Show less' : 'Read more'}
+              </button>
             </div>
           </div>
         )}

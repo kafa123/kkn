@@ -24,6 +24,7 @@ export default function GalleryCarousel({ images }: GalleryCarouselProps) {
       <Swiper
         className="w-full h-[80vh]"
         modules={[Parallax, Navigation, Pagination, Autoplay]}
+        spaceBetween={20}
         slidesPerView={1.5}
         centeredSlides={true}
         initialSlide={1} // because we added a dummy at index 0

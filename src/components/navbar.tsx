@@ -1,11 +1,13 @@
-'use client'; // for Next.js App Router
+'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
@@ -23,11 +29,11 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className={`max-w-7xl mx-auto pl-4 pr-10 py-4 flex justify-between items-center ${
+        className={`max-w-7xl mx-auto px-4 py-4 flex justify-between items-center ${
           isScrolled ? 'text-black' : 'text-white'
         }`}
       >
-        {/* Logo and Title */}
+        {/* Logo */}
         <div className="flex items-center gap-4">
           <Image
             src="/logo-bantul.png"
@@ -39,8 +45,8 @@ export default function Navbar() {
           <div className="text-lg font-bold">Kedungjati</div>
         </div>
 
-        {/* Menu */}
-        <ul className="flex gap-6">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6">
           <li>
             <Link href="/" className="rounded-xl px-2 hover:bg-white/50">
               Home
@@ -57,7 +63,40 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMobileMenu}
+          className="md:hidden focus:outline-none "
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </nav>
+
+      {/* Mobile Dropdown */}
+      {isMobileMenuOpen && (
+        <div
+          className={`md:hidden bg-cyan-100 text-black w-full px-6 pb-4 pt-2 transition-all`}
+        >
+          <ul className="flex flex-col gap-4">
+            <li>
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/lembah_oyo" onClick={() => setIsMobileMenuOpen(false)}>
+                Wisata
+              </Link>
+            </li>
+            <li>
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 }
