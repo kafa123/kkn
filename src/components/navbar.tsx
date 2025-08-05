@@ -42,7 +42,9 @@ export default function Navbar() {
             height={40}
             className="rounded-full"
           />
-          <div className="text-lg font-bold">Kedungjati</div>
+          <div className="text-lg font-bold">
+            <h2>Kedungjati</h2>
+          </div>
         </div>
 
         {/* Desktop Menu */}

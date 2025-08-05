@@ -74,7 +74,6 @@ export function Service() {
                 />
               </div>
 
-
               {/* Text Content */}
               <div className="md:w-1/2 text-left">
                 <h3 className="text-2xl font-semibold mb-4" data-aos="fade-down"
