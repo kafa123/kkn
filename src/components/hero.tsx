@@ -33,7 +33,7 @@ export default function Hero({
 
   return (
     <section
-      className="relative h-[90vh] bg-cover bg-center"
+      className="relative h-[90vh] bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-black/40 flex items-center justify-center">

@@ -26,10 +26,14 @@ export default function WisataPage() {
       />
       <div className='px-4 sm:px-6 lg:px-8'>
         <Section data-aos="fade-down" title="Make Yours Destination" image="/contoh.JPG" />
+        </div>
+        <div className='px-4 py-6 sm:px-6 lg:px-8 bg-cyan-100'>
         <h2 className="text-center text-xl mt-10 font-bold" data-aos="fade-up">
           Countless Experience
         </h2>
         <Features />
+        </div>
+        <div className='px-4 sm:px-6 lg:px-8'>
         <Section
           title="The Fact and History about Oya River"
           image="/kedung_parangan.JPG"

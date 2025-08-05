@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-cyan-100 bg-opacity-90' : 'bg-black/15'
+        isScrolled ? 'bg-cyan-200' : 'bg-black/15'
       }`}
     >
       <nav
@@ -78,7 +78,7 @@ export default function Navbar() {
       {/* Mobile Dropdown */}
       {isMobileMenuOpen && (
         <div
-          className={`md:hidden bg-cyan-100 text-black w-full px-6 pb-4 pt-2 transition-all`}
+          className={`md:hidden bg-black/20 text-white w-full px-6 pb-4 pt-2 transition-all`}
         >
           <ul className="flex flex-col gap-4">
             <li>
